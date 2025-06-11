@@ -15,10 +15,9 @@ class FoodHashMap:
     def get_nutrition(self, food_name):
         return self.food_data.get(food_name, None)
 
-
 class FoodInputForm(tk.Frame):
     def __init__(self, master):
-        super().__init__(master, bg="#fdfdfd")
+        super().__init__(master, bg="#F9FAF4")
         self.food_map = FoodHashMap()
         self.create_widgets()
 

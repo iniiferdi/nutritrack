@@ -1,5 +1,4 @@
 import tkinter as tk
-from ui.splash_screen import SplashScreen
 from ui.main_window import MainWindow
 
 def run_app():
@@ -8,14 +7,12 @@ def run_app():
 
     root.title("NutriTrack - Monitoring Gizi")
     root.geometry("900x600")
-    root.configure(bg="#fdfdfd")
+    root.configure(bg="#EBECE6")
+    root.state('zoomed')
 
-    def show_main_window():
-        root.deiconify()
-        app = MainWindow(root)
-        app.pack(fill="both", expand=True)
-
-    splash = SplashScreen(root, on_close=show_main_window)
+    root.deiconify()
+    app = MainWindow(root)
+    app.pack(fill="both", expand=True)    
 
     root.mainloop()
 
